@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 html {
   block-size: 100%;
 }
@@ -25,7 +44,6 @@ html {
   display: grid;
   grid-template-areas: "result details";
   min-width: 1140px;
-  min-height: 534px;
   gap: 30px;
   margin: auto;
 }
@@ -40,7 +58,7 @@ html {
   position: relative;
   height: 386px;
   width: 711px;
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .result__video {
@@ -51,7 +69,6 @@ html {
 }
 
 .search-form {
-  height: 54px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -64,17 +81,19 @@ html {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .search-form__label {
   display: flex;
+  align-items: center;
   width: fit-content;
+  gap: 3px;
 }
 
 .search-form__textfield {
@@ -84,7 +103,7 @@ html {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  color: #ffffffb2;
+  color: #fff;
   appearance: none;
   font-family: Fira Sans Condensed;
   font-weight: 400;
@@ -104,15 +123,9 @@ html {
   color: #fff;
 }
 
-.search-form__label {
-  display: flex;
-  gap: 3px;
-}
-
 .search-form__checkbox-list {
   display: flex;
   width: 208px;
-  height: 26px;
   gap: 18px;
 }
 
@@ -139,8 +152,8 @@ html {
   opacity: 1;
 }
 
-.search-form__label-text:hover,
-.search-form__submit-button:hover,
+.search-form__label:hover .search-form__label-text,
+.button:hover,
 .content__video-card-description-container:hover,
 .content__video-card-title:hover {
   cursor: pointer;
@@ -156,7 +169,7 @@ html {
   line-height: 100%;
   text-align: center;
   color: #fff;
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
 }
 
 .search-form__submit-button {
@@ -170,10 +183,9 @@ html {
   background-color: #545050;
 }
 
-.search-form__submit-button:focus-visible,
 .search-form__label:focus-visible,
 .search-form__textfield:focus-visible,
-.more-button:focus-visible,
+.button:focus-visible,
 .content__video-card:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
@@ -280,25 +292,6 @@ html {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
