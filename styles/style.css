@@ -105,7 +105,7 @@ html {
   border-bottom: 1px solid #fff;
   color: #fff;
   appearance: none;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
@@ -164,7 +164,7 @@ html {
 
 .button {
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -227,8 +227,13 @@ html {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card-thumbnail {
@@ -265,14 +270,14 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 3px;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 16px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
